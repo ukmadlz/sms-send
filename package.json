@@ -1,0 +1,25 @@
+{
+  "name": "sms-alert",
+  "version": "0.0.1",
+  "description": "An app to update our attendees of whats happening",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Mike Elsmore <mike@elsmore.me>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "amqplib": "^0.4.2",
+    "bell": "^8.3.0",
+    "cfenv": "^1.0.3",
+    "cloudant": "^1.5.1",
+    "dotenv": "^2.0.0",
+    "hapi": "^15.1.1",
+    "hapi-auth-cookie": "^6.1.1",
+    "inert": "^4.0.2",
+    "jade": "^1.11.0",
+    "nexmo": "^1.0.0",
+    "vision": "^4.1.0"
+  }
+}

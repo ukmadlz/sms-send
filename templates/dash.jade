@@ -1,0 +1,27 @@
+
+html
+  head
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css")
+  body
+    nav
+      .brand-logo  SMS
+      ul.right.hide-on-med-and-down
+        li
+          a(href="/logout") Logout
+      ul#slide-out.side-nav
+        li
+          a(href="/logout") Logout
+      a.button-collapse(href="#" data-activates="slide-out")
+        i.mdi-navigation-menu
+    .container
+      .row
+        .col.s12
+          form#check(data-database=database)
+            .input-field
+              textarea#message.materialize-textarea(name="message", placeholder="What message to send?")
+              label(for="message") Message
+            .input-field
+              input(type="submit")
+    script(src="//code.jquery.com/jquery-2.2.3.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js")
+    script(src="/app.js")
