@@ -7,6 +7,7 @@ require('dotenv').load({ silent: true });
 const cfenv  = require('cfenv');
 const Hapi   = require('hapi');
 const Path   = require('path');
+const Boom = require('boom');
 const Amqp = require('amqplib/callback_api');
 const Cloudant = require('cloudant');
 
@@ -106,6 +107,12 @@ server.register([
             //Just store a part of the twitter profile information in the session as an example. You could do something
             //more useful here - like loading or setting up an account (social signup).
             const profile = request.auth.credentials.profile;
+
+            const authorised = body.authorised.split(',');
+
+            if (authorised.indexOf(profile.username) < 0) {
+              return reply(Boom.unauthorized('Not Authorised'));
+            }
 
             request.cookieAuth.set({
               twitterId: profile.id,
