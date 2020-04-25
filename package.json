@@ -10,7 +10,7 @@
   "author": "Mike Elsmore <mike@elsmore.me>",
   "license": "Apache-2.0",
   "dependencies": {
-    "amqplib": "^0.4.2",
+    "amqplib": "^0.5.5",
     "bell": "^8.3.0",
     "boom": "^4.2.0",
     "cfenv": "^1.0.3",
